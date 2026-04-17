@@ -1,6 +1,12 @@
-/data/
-data/
-/data/
-
-# Project exclude paths
-/models/
+.claude/
+.idea/
+archive/artifacts/
+archive/checkpoints/
+archive/misc/
+data/archive/
+data/covid_brazil_combined.csv
+outputs/
+figures/
+.DS_Store
+__pycache__/
+*.pyc

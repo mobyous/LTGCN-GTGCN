@@ -1,0 +1,274 @@
+{
+  "main_models": {
+    "spain": {
+      "num_nodes": 52,
+      "models": {
+        "gcrn": {
+          "hidden_channels": 288,
+          "params": 250849
+        },
+        "ltgcn": {
+          "trans_hidden": 128,
+          "params": 269045
+        },
+        "gtgcn": {
+          "hidden_dim": 128,
+          "params": 224609
+        },
+        "graph_wavenet": {
+          "residual_channels": 29,
+          "dilation_channels": 29,
+          "skip_channels": 232,
+          "end_channels": 464,
+          "blocks": 4,
+          "num_layers": 2,
+          "params": 247483
+        },
+        "persistence": {
+          "params": 0
+        }
+      },
+      "budget_summary": {
+        "min_trainable_params": 224609,
+        "max_trainable_params": 269045,
+        "max_min_ratio": 1.1978
+      }
+    },
+    "brazil_top40": {
+      "num_nodes": 38,
+      "models": {
+        "gcrn": {
+          "hidden_channels": 144,
+          "params": 63217
+        },
+        "ltgcn": {
+          "trans_hidden": 64,
+          "params": 69031
+        },
+        "gtgcn": {
+          "hidden_dim": 64,
+          "params": 57025
+        },
+        "graph_wavenet": {
+          "residual_channels": 14,
+          "dilation_channels": 14,
+          "skip_channels": 112,
+          "end_channels": 224,
+          "blocks": 4,
+          "num_layers": 2,
+          "params": 59253
+        },
+        "persistence": {
+          "params": 0
+        }
+      },
+      "budget_summary": {
+        "min_trainable_params": 57025,
+        "max_trainable_params": 69031,
+        "max_min_ratio": 1.2105
+      }
+    },
+    "brazil_cleaned": {
+      "num_nodes": 1293,
+      "models": {
+        "gcrn": {
+          "hidden_channels": 144,
+          "params": 63217
+        },
+        "ltgcn": {
+          "trans_hidden": 64,
+          "params": 70286
+        },
+        "gtgcn": {
+          "hidden_dim": 64,
+          "params": 57025
+        },
+        "graph_wavenet": {
+          "residual_channels": 11,
+          "dilation_channels": 11,
+          "skip_channels": 88,
+          "end_channels": 176,
+          "blocks": 4,
+          "num_layers": 2,
+          "params": 62315
+        },
+        "persistence": {
+          "params": 0
+        }
+      },
+      "budget_summary": {
+        "min_trainable_params": 57025,
+        "max_trainable_params": 70286,
+        "max_min_ratio": 1.2325
+      }
+    },
+    "brazil_full": {
+      "num_nodes": 5383,
+      "models": {
+        "gcrn": {
+          "hidden_channels": 144,
+          "params": 63217
+        },
+        "ltgcn": {
+          "trans_hidden": 64,
+          "params": 74376
+        },
+        "gtgcn": {
+          "hidden_dim": 64,
+          "params": 57025
+        },
+        "graph_wavenet": {
+          "residual_channels": 32,
+          "dilation_channels": 32,
+          "skip_channels": 256,
+          "end_channels": 512,
+          "blocks": 4,
+          "num_layers": 2,
+          "params": 407245
+        },
+        "persistence": {
+          "params": 0
+        }
+      },
+      "budget_summary": {
+        "min_trainable_params": 57025,
+        "max_trainable_params": 407245,
+        "max_min_ratio": 7.1415
+      }
+    }
+  },
+  "ablations": {
+    "spain": {
+      "num_nodes": 52,
+      "models": {
+        "full_ltgcn": {
+          "trans_hidden": 128,
+          "params": 269045
+        },
+        "temporal_only": {
+          "hidden_dim": 148,
+          "params": 269869
+        },
+        "spatial_only": {
+          "hidden_dim": 500,
+          "params": 267565
+        },
+        "no_fusion": {
+          "hidden_dim": 132,
+          "params": 268209
+        },
+        "linear_temporal_gcn": {
+          "hidden_dim": 252,
+          "params": 267489
+        },
+        "persistence": {
+          "params": 0
+        }
+      },
+      "budget_summary": {
+        "min_trainable_params": 267489,
+        "max_trainable_params": 269869,
+        "max_min_ratio": 1.0089
+      }
+    },
+    "brazil_top40": {
+      "num_nodes": 38,
+      "models": {
+        "full_ltgcn": {
+          "trans_hidden": 64,
+          "params": 69031
+        },
+        "temporal_only": {
+          "hidden_dim": 72,
+          "params": 65657
+        },
+        "spatial_only": {
+          "hidden_dim": 244,
+          "params": 68141
+        },
+        "no_fusion": {
+          "hidden_dim": 68,
+          "params": 72931
+        },
+        "linear_temporal_gcn": {
+          "hidden_dim": 124,
+          "params": 68179
+        },
+        "persistence": {
+          "params": 0
+        }
+      },
+      "budget_summary": {
+        "min_trainable_params": 65657,
+        "max_trainable_params": 72931,
+        "max_min_ratio": 1.1108
+      }
+    },
+    "brazil_cleaned": {
+      "num_nodes": 1293,
+      "models": {
+        "full_ltgcn": {
+          "trans_hidden": 64,
+          "params": 70286
+        },
+        "temporal_only": {
+          "hidden_dim": 76,
+          "params": 72949
+        },
+        "spatial_only": {
+          "hidden_dim": 248,
+          "params": 70249
+        },
+        "no_fusion": {
+          "hidden_dim": 68,
+          "params": 74186
+        },
+        "linear_temporal_gcn": {
+          "hidden_dim": 124,
+          "params": 69434
+        },
+        "persistence": {
+          "params": 0
+        }
+      },
+      "budget_summary": {
+        "min_trainable_params": 69434,
+        "max_trainable_params": 74186,
+        "max_min_ratio": 1.0684
+      }
+    },
+    "brazil_full": {
+      "num_nodes": 5383,
+      "models": {
+        "full_ltgcn": {
+          "trans_hidden": 64,
+          "params": 74376
+        },
+        "temporal_only": {
+          "hidden_dim": 76,
+          "params": 72949
+        },
+        "spatial_only": {
+          "hidden_dim": 256,
+          "params": 74561
+        },
+        "no_fusion": {
+          "hidden_dim": 68,
+          "params": 78276
+        },
+        "linear_temporal_gcn": {
+          "hidden_dim": 124,
+          "params": 73524
+        },
+        "persistence": {
+          "params": 0
+        }
+      },
+      "budget_summary": {
+        "min_trainable_params": 72949,
+        "max_trainable_params": 78276,
+        "max_min_ratio": 1.073
+      }
+    }
+  }
+}
